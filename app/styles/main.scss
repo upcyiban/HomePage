@@ -148,6 +148,7 @@ html, body {
       color: white;
       background: none;
     }
+    /*
     img{
       -webkit-transition: all 0.35s;
       -moz-transition: all 0.35s;
@@ -155,6 +156,7 @@ html, body {
       -o-transition: all 0.35s;
       transition: all 0.35s;
     }
+    */
     .showSection:hover img{
       filter:blur(5px);
     }
