@@ -100,7 +100,7 @@ html, body {
       -ms-transform: scale(1,1);
       -o-transform: scale(1,1);
       transform: scale(1,1);
-      figcaption{
+      figcaption a{
         position: absolute;
         top:10px;
         left:15%;
@@ -109,7 +109,7 @@ html, body {
         -ms-transition: all 0.35s;
         -o-transition: all 0.35s;
         transition: all 0.35s;
-
+text-decoration: none;
         width:60%;
         padding:10px;
         text-align: center;
@@ -134,12 +134,12 @@ html, body {
       figcaption{
         cursor: pointer;
       }
-      figcaption:hover{
+      figcaption a:hover{
         color:deepskyblue;
         background: white;
       }
     }
-    .showSection:hover figcaption{
+    .showSection:hover figcaption a{
       -webkit-transform: translate(0,100%);
       -moz-transform: translate(0,100%);
       -ms-transform: translate(0,100%);
