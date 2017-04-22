@@ -242,68 +242,16 @@ body {
   margin-top: 10px;
   margin-left: 60%;
 }
-.study{
-  background: #96e0d3;
-}
-.study-btn{
-  background: #7abdad;
-  position: relative;
-  top: -79px;
-  font-size: 25px;
-  font-family: "Microsoft YaHei UI";
-  color: #fff;
-}
-.life{
-  background: #fbc98c;
-}
-.life-btn{
-  background: #ffdc69;
-  position: relative;
-  top: -79px;
-  font-size: 25px;
-  font-family: "Microsoft YaHei UI";
-  color: #fff;
-}
-.activity{
-  background-color: #75c9d2;
-
-}
-.activity-btn{
-  background: #63adff;
-  position: relative;
-  top: -79px;
-  font-size: 25px;
-  font-family: "Microsoft YaHei UI";
-  color: #fff;
-}
-.help{
-  background: #95d7b1;
-}
-.help-btn{
-  background: #adce7b;
-  position: relative;
-  top: -79px;
-  font-size: 25px;
-  font-family: "Microsoft YaHei UI";
-  color: #fff;
-}
-.community{
-  background: #ff9393;
-}
-.community-btn{
-  background: #ff747a;
-  position: relative;
-  top: -79px;
-  font-size: 25px;
-  font-family: "Microsoft YaHei UI";
-  color: #fff;
-}
-
 .myBtn-tag{
   height: 98px;
   width: 80%;
   margin-left: 20%;
   border-radius: 50px;
+  position: relative;
+  top: -79px;
+  font-size: 25px;
+  font-family: "Microsoft YaHei UI";
+  color: #fff;
 }
 .my-active{
   width: 100%;
