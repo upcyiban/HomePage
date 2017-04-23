@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="styles/main.css">
     <script src="scripts/vue.js"></script>
     <script src="https://cdn.bootcss.com/vue-resource/1.0.3/vue-resource.js"></script>
-    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js">
-    </script> -->
     <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
   </head>
   <body>
@@ -23,36 +21,12 @@
           <button class="btn myBtn-head shuZiShiDa" onclick="shuZiShiDa()">数字石大</button>
         </div>
       <div class="tags">
-        <div class="tag study">
+
+        <div class="tag" v-for="(key, item) in catalogList" v-bind:style="{'background': item.bgColor}">
           <div class="finger">
             <div class="circle"></div>
           </div>
-          <button class="btn myBtn-tag study-btn my-active" v-on:click="community()"
-          >易社区</button>
-        </div>
-        <div class="tag life">
-          <div class="finger">
-            <div class="circle"></div>
-          </div>
-          <button class="btn myBtn-tag life-btn" v-on:click="study()" id="study">易学习</button>
-        </div>
-        <div class="tag activity">
-          <div class="finger">
-            <div class="circle"></div>
-          </div>
-          <button class="btn myBtn-tag activity-btn" v-on:click="life()">易生活</button>
-        </div>
-        <div class="tag help">
-          <div class="finger">
-            <div class="circle"></div>
-          </div>
-          <button class="btn myBtn-tag help-btn" v-on:click="activity()">易工具</button>
-        </div>
-        <div class="tag community">
-          <div class="finger">
-            <div class="circle"></div>
-          </div>
-          <button class="btn myBtn-tag community-btn" v-on:click="help()">易帮助</button>
+          <button class="btn myBtn-tag" v-bind:class="{'my-active':currentIndex === key}" v-bind:style="{'background': item.btnColor}" v-on:click="changeCatalog(key)">{{item.name}}</button>
         </div>
       </div>
       <div class="content">
@@ -67,13 +41,8 @@
         <img src="./images/address.png" alt="address" class="address">
         <img src="./images/logo.png" alt="yblogo" class="ybLogo">
       </div>
-
-
     </div>
-    
- 
+
     <script src="scripts/main.js"></script>
-
-
   </body>
 </html>
