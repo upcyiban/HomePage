@@ -1,0 +1,8 @@
+.RightBar{
+    position: fixed;
+    top: 150px;
+    right: 0;
+    width: 100px;
+    height: 500px;
+    background: white
+}
