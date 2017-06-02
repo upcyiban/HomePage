@@ -1,5 +1,51 @@
 .TitleBar{
-    height: 100px;
+    height: 50px;
     width: 100%;
-    background: white
+    background: rgba(255, 255, 255, .6);
+    padding: 20px 0 20px 0;
+}
+.Title-Bar-Logo-Container{
+    float: left;
+    width: 30%;
+}
+.Title-Bar-Logo{
+    margin-left: 40px;
+}
+.Title-Bar-Title-Container{
+    float: left;
+    width: 40%;
+}
+.Title-Bar-Title{
+    text-align: center;
+    margin: 0 auto;
+}
+.Title-Bar-Buttons-Container{
+    float: left;
+    width: 30%;
+}
+.Title-Bar-Buttons-Img{
+    float: right;
+    margin:8px 15px
+}
+.Title-Bar-Buttons-Button{
+    float:right;
+    text-decoration: none;
+    padding: 5px 15px 5px 15px;
+    box-shadow: 0 0 5px 4px white;
+    border-radius: 21px;
+    color: white;
+    margin:8px 15px
+}
+.Title-Bar-Buttons-Button:hover{
+    box-shadow: 0 0 8px 4px white;
+}
+
+.Title-Bar-Button-Bg-Pink{
+    background: rgba(255, 138, 143, 1)
+}
+.Title-Bar-Button-Bg-Blue{
+    background: rgba(99, 173, 253, 1)
+}
+.Title-Bar-Button-Bg-Green{
+    background: rgba(173,206,123,1)
 }
