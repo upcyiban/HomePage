@@ -1,7 +1,7 @@
 import React,{ Component } from 'react'
 import './TitleBar.css'
 import logo from '../../assets/logo/logo.png'
-import search from '../../assets/logo/search.svg'
+import search from '../../assets/logo/search.png'
 
 
 
@@ -19,7 +19,7 @@ class Logo extends Component{
     render(){
         return (
             <div className="Title-Bar-Logo-Container">
-                <img className="Title-Bar-Logo" src={logo}/>
+                <img alt="logo" className="Title-Bar-Logo" src={logo}/>
             </div>
         )
     }
@@ -42,7 +42,7 @@ class Buttons extends Component{
                 <Button href="https://baidu.com" bg="Title-Bar-Button-Bg-Pink" val="注册"/>
                 <Button href="https://baidu.com" bg="Title-Bar-Button-Bg-Blue" val="登陆"/>
                 <Button href="https://baidu.com" bg="Title-Bar-Button-Bg-Green" val="数字石大"/>
-                <img className="Title-Bar-Buttons-Img" src={search}/>
+                <img alt="search" className="Title-Bar-Buttons-Img" src={search}/>
                 
             </div>
         )

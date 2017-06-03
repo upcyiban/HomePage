@@ -1,6 +1,16 @@
+@media (max-width: 1240px){
+    .TitleBar{
+        width: 1240px;        
+    }
+
+}
+@media (min-width: 1240px){
+    .TitleBar{
+        width: 100%;
+    }
+}
 .TitleBar{
     height: 50px;
-    width: 100%;
     background: rgba(255, 255, 255, .6);
     padding: 20px 0 20px 0;
 }
