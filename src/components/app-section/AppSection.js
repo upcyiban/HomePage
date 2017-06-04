@@ -23,56 +23,56 @@ const data = [
     ],
     [
         {
-        name: "what1",
+        name: "what2",
         href: "#",
         icon: icon
         },
     ],
     [
         {
-        name: "what1",
+        name: "what3",
         href: "#",
         icon: icon
         },
         {
-        name: "what1",
+        name: "what3",
         href: "#",
         icon: icon
         },
         {
-        name: "what1",
+        name: "what3",
         href: "#",
         icon: icon
         },
         {
-        name: "what1",
+        name: "what3",
         href: "#",
         icon: icon
         },
     ],
     [
         {
-        name: "what1",
+        name: "what4",
         href: "#",
         icon: icon
         },
         {
-        name: "what1",
+        name: "what4",
         href: "#",
         icon: icon
         },
         {
-        name: "what1",
+        name: "what4",
         href: "#",
         icon: icon
         },
         {
-        name: "what1",
+        name: "what4",
         href: "#",
         icon: icon
         },
         {
-        name: "what1",
+        name: "what4",
         href: "#",
         icon: icon
         },
@@ -106,7 +106,6 @@ class AppNavButton extends Component{
         super();
     }
     handleClick(index){
-        console.log(index)
         this.props.onButtonClick(index);
     }
     render(){
@@ -131,7 +130,7 @@ class AppNavButton extends Component{
 class App extends Component{
     render(){
         return (
-            <a className="App-Section-App" href={this.props.detail.href}>
+            <a ref="app" className="App-Section-App" href={this.props.detail.href}>
                 <img alt={this.props.detail.name} className="App-Section-App-Icon" src={this.props.detail.icon} />
                 <div className="App-Section-App-Name">{this.props.detail.name}</div>
             </a>
@@ -140,26 +139,30 @@ class App extends Component{
 }
 class AppNav extends Component{
     constructor(props){
-        super();
+        super(props);
         this.handleButtonClick = this.handleButtonClick.bind(this)
     }
     handleButtonClick(index){
-        console.log(index);
         this.props.onButtonClick(index)
     }
     render(){
         return (
             <div className="App-Section-App-Nav">
-                {buttonConfig.map((d,i)=><AppNavButton bg={"App-Section-Bg-"+i%5} detail={d} key={i} index={i} active={this.props.active == i} onButtonClick={this.handleButtonClick}/>)}
+                {buttonConfig.map((d,i)=><AppNavButton bg={"App-Section-Bg-"+i%5} detail={d} key={i} index={i} active={this.props.active === i} onButtonClick={this.handleButtonClick}/>)}
             </div>
         )
     }
 }
 
 class AppShowPanel extends Component{
+    componentDidUpdate(){
+        if(this.props.data.length===0){
+            this.props.refresh()
+        }
+    }
     render(){
         return (
-            <div className="App-Section-App-Show-Panel">
+            <div ref="appsPanel" className="App-Section-App-Show-Panel">
                 {
                     this.props.data.map((d,i)=><App detail={d} key={i}/>)
                 }
@@ -173,19 +176,23 @@ export default class AppSection extends Component{
     constructor(props){
         super();
         this.state = {
-            activeIndex:0
+            activeIndex:0,
+            activeTab:data[0]
         }
         this.handleButtonClick = this.handleButtonClick.bind(this)
+        this.toRefresh         = this.toRefresh.bind(this)
     }
     handleButtonClick(index){
-        console.log(index)
-        this.setState({activeIndex:index})
+        this.setState({activeIndex:index,activeTab:[]})
+    }
+    toRefresh(){
+        this.setState({activeTab:data[this.state.activeIndex]})
     }
     render(){
         return (
             <div className="AppSection">
                 <AppNav onButtonClick={this.handleButtonClick} active={this.state.activeIndex}/>
-                <AppShowPanel data={data[this.state.activeIndex]}/>
+                <AppShowPanel data={this.state.activeTab} refresh={this.toRefresh}/>
             </div>
         )
     }

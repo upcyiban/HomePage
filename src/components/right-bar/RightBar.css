@@ -1,8 +1,14 @@
 .RightBar{
     position: fixed;
-    top: 150px;
-    right: 0;
-    width: 100px;
-    height: 500px;
-    background: white
+    top: 45%;
+    right: 10px;
+    width: 60px;
+    background: rgba(255, 255, 255, .6);
+    border-radius: 10px;
+}
+.Right-Bar-Icon{
+    margin: 14px auto 14px auto;
+    display: block;
+    width: 42px;
+    height: 42px
 }

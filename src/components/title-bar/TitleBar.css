@@ -46,6 +46,9 @@
     color: white;
     margin:8px 15px
 }
+.Title-Bar-Buttons-Button:nth-child(1){
+    margin-right: 50px;
+}
 .Title-Bar-Buttons-Button:hover{
     box-shadow: 0 0 8px 4px white;
 }
