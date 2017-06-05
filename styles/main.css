@@ -1,0 +1,304 @@
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+/* Space out content a bit */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: url("../images/background.png") no-repeat;
+  background-size: cover;
+
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+
+.marketing p + h4 {
+  margin-top: 28px;
+}
+@media screen and (max-height: 768px) {
+  .address{
+  margin: 20px;
+  }
+  .ybLogo{
+  float: right;
+  margin:20px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  html{
+  width: 1280px;
+  }
+   .address{
+  margin: 20px;
+}
+.ybLogo{
+  float: right;
+  margin:20px;
+}
+}
+@media screen and (min-height: 768px) {
+  html{
+    height: 100%;
+  }
+  .address{
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+}
+.ybLogo{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+}
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 730px;
+  }
+  body{
+    width: 100%;
+  }
+  
+
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+@-webkit-keyframes shake {
+     0%{
+         -webkit-transform:translate(2px, 2px);
+     }
+     25%{
+         -webkit-transform:translate(-2px, -2px);
+     }
+     50%{
+         -webkit-transform:translate(0px, 0px);
+     }
+     75%{
+         -webkit-transform:translate(2px, -2px);
+     }
+     100%{
+         -webkit-transform:translate(-2px, 2px);
+     }
+ }
+ @keyframes shake {
+     0%{
+         transform:translate(2px, 2px);
+     }
+     25%{
+         transform:translate(-2px, -2px);
+     }
+     50%{
+         transform:translate(0px, 0px);
+     }
+     75%{
+         transform:translate(2px, -2px);
+     }
+     100%{
+         transform:translate(-2px, 2px);
+     }
+ }
+.btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn.active.focus {
+  outline: none;
+}
+.myContainer{
+  width: 100%;
+  height: 768px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  padding-top: 25px;
+}
+.myHead{
+  height: 90px;
+  width: 100%;
+  padding-top: 20px;
+  padding-left: 3%;
+  background: white;
+  opacity: 0.5;
+}
+.ybfzzx{
+  margin-left: 13.3%;
+}
+.myBtn-head{
+  border-radius: 20px;
+  margin-right:2%;
+  font-size: 15px;
+  font-family: "Microsoft YaHei UI";
+  font-weight: bold;
+  color: #ffffff;
+}
+.dengLu{
+  background: #63adff;
+  margin-left: 20%;
+}
+.shuZiShiDa{
+  background: #adce7b;
+}
+.tags{
+  height: 567px;
+  width: 25%;
+  float: left;
+}
+.tag{
+  width: 80%;
+  height: 98px;
+  float: left;
+  margin-top:17px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  -moz-border-top-right-radius: 50px;
+  -moz-border-bottom-right-radius: 50px;
+  -ms-border-top-right-radius:50px;
+  -ms-border-bottom-right-radius:50px;
+  transition: all .3s;
+}
+.finger{
+  height: 60px;
+  width: 38%;
+  margin-top: 19px;
+  border: 5px #fff solid;
+  border-left: none;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  -moz-border-top-right-radius: 50px;
+  -moz-border-bottom-right-radius: 50px;
+  -ms-border-top-right-radius:50px;
+  -ms-border-bottom-right-radius:50px;
+  float: left;
+  position: relative;
+  z-index: 50;
+}
+.circle{
+  width: 40px;
+  height: 30px;
+  border: 5px #fff solid;
+  border-radius: 50px;
+  margin-top: 10px;
+  margin-left: 60%;
+}
+.myBtn-tag{
+  height: 98px;
+  width: 80%;
+  margin-left: 20%;
+  border-radius: 50px;
+  position: relative;
+  top: -79px;
+  font-size: 25px;
+  font-family: "Microsoft YaHei UI";
+  color: #fff;
+}
+.my-active{
+  width: 100%;
+  box-shadow: 0px 0px 3px 4px #fff;
+  transition: all .3s;
+}
+.content{
+  width: 70%;
+  float: left;
+  padding-left: 2%;
+}
+.content :hover{
+  cursor: pointer;
+  -webkit-animation:shake 0.4s infinite;
+  animation:shake 0.4s infinite;
+}
+.apply{
+  width: 120px;
+  height: 150px;
+  margin-top: 100px;
+  margin-left: 10%;
+  float: left;
+  display: none;
+}
+.apply-p{
+  width: 120px;
+  height: 30px;
+  color:gray;
+  font-size: 18px;
+  text-align: center;
+  font-family: "Microsoft YaHei UI";
+}
+.apply-div{
+  width: 120px;
+  height: 110px;
+  border-radius: 20px;
+  background: #fff;
+}
+.img{
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+  margin-left: 20px;
+  margin-top: 18px;
+}
+.my-footer{
+  width: 100%;
+  height: 100px;
+  clear:both;
+}
