@@ -1,4 +1,98 @@
 .InfoSection{
     height: 350px;
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+}
+.list-header{
+	width: 100%;
+	margin: 0 auto;
+	margin-top: 1em;
+	margin-bottom: 1em;
+
+}
+.list-header-li{
+	width: 13%;
+	height: 40px;
+	list-style: none;
+	display: inline-block;
+	text-align: center;
+	margin: 0 auto;
+	margin-right: 3%; 
+	background: rgba(163, 167, 179, 0.82);
+	border-radius: 10px;
+}
+.list-header-li a{
+	text-decoration: none;
+	color: white;
+}
+.list-header-li p{
+	margin-top: 10px;
+}
+
+
+
+
+.list-vertical{
+	width: 10%;
+	position: absolute;
+	height: 250px;
+}
+.list-vertical-li{
+	background: rgba(163, 167, 179, 0.82);
+	text-align: center;
+	list-style: none;
+	height: 25%;
+	margin-bottom: 10px;
+	border-radius: 21px;
+}
+.list-vertical-li a{
+	color: white;
+	text-decoration: none;
+	line-height: 60px;
+}
+
+
+.img-school{
+	width: 21%;
+	height: 250px;
+	position: absolute;
+	left: 13%;
+	background: rgba(163, 167, 179, 0.82);
+	border-radius: 21px;
+}
+.img-school .port{
+	width: 60%;
+	padding: 0;
+	margin: 0 auto;
+	text-align: center;
+}
+.img-school .port i{
+	font-weight: 800;
+	color: white;
+}
+.img-school li{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: inline-block;
+}
+.img-school img{
+	width: 180px;
+}
+.img-school button{
+	width: 30px;
+	background: rgba(255, 255, 255, 0);
+	border: none;
+	color: white;
+	font-size: 1.5em;
+	position: absolute;
+}
+#img-school-left{
+	left: 1px;
+	top: 40%;
+}
+#img-school-right{
+	right: 1px;
+	top: 40%;
 }
