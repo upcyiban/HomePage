@@ -1,6 +1,19 @@
+@media (max-width: 1240px){
+    .InfoSection{
+        width: 1200px;        
+    }
+
+}
+@media (min-width: 1240px){
+    .InfoSection{
+        width: 90%;
+    }
+}
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
 .InfoSection{
-    height: 350px;
-    width: 90%;
+    height: 300px;
+	padding-bottom: 10px;
     margin: 0 auto;
     position: relative;
 }
@@ -29,70 +42,84 @@
 .list-header-li p{
 	margin-top: 10px;
 }
-
-
-
-
 .list-vertical{
 	width: 10%;
-	position: absolute;
-	height: 250px;
+	height: 200px;
+	float: left;
 }
 .list-vertical-li{
 	background: rgba(163, 167, 179, 0.82);
 	text-align: center;
 	list-style: none;
-	height: 25%;
-	margin-bottom: 10px;
-	border-radius: 21px;
+	height: 40px;
+	margin: 10px 0 20px;
+	border-radius: 10px;
 }
 .list-vertical-li a{
 	color: white;
 	text-decoration: none;
-	line-height: 60px;
+	line-height: 40px;
 }
-
-
-.img-school{
-	width: 21%;
-	height: 250px;
-	position: absolute;
-	left: 13%;
-	background: rgba(163, 167, 179, 0.82);
-	border-radius: 21px;
+.news-all-container{
+	float: left;
+	width: 80%;
 }
-.img-school .port{
-	width: 60%;
-	padding: 0;
-	margin: 0 auto;
+.YbCarousel{
+	float: left;
+	margin: 10px 1.5%;
+	/*margin-left: 30px;*/
+	padding: 15px 3% 30px 3%;
+	background: rgba(255, 255, 255, .6);
+	border-radius: 10px;
+	height: 180px;
+	width: 24%;
+}
+.notice-container{
+	float: left;
+	width: 26%;
+	margin: 10px 1.5%;
+	padding: 15px 2% 30px 2%;
+	background: rgba(255, 255, 255, .6);
+	border-radius: 10px;
+	height: 180px;
+	overflow: hidden
+}
+.notice-container>h2{
+	line-height: 10px;
 	text-align: center;
 }
-.img-school .port i{
-	font-weight: 800;
+.notice-container>p{
+	line-height: 10px;
+}
+.customize-slick-slider{
+	height: 180px;
+}
+.slick-item{
+	display: block;
+	height: 180px;
+	width: 100%
+}
+.teacher-info{
+	float: left;
+	width: 10%;
+	height: 180px;
+}
+.teacher-box{
+	display: block;
+	width: 80%;
+	background: rgba(255, 255, 255, .5);
+	margin: 15px 0 30px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 10px;
+	text-decoration: none;
 	color: white;
 }
-.img-school li{
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	display: inline-block;
-}
-.img-school img{
-	width: 180px;
-}
-.img-school button{
-	width: 30px;
-	background: rgba(255, 255, 255, 0);
-	border: none;
-	color: white;
-	font-size: 1.5em;
-	position: absolute;
-}
-#img-school-left{
-	left: 1px;
-	top: 40%;
-}
-#img-school-right{
-	right: 1px;
-	top: 40%;
+.teacher-box>div.college-logo{
+	height: 100px;
+	width: 90px;
+	margin: 10px auto 0 auto;
+	background: url(../../assets/logo/college-logo.png);
+	background-repeat: no-repeat;
+	background-position: center;
 }

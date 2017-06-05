@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { Component } from 'react';
 import AppSection from './components/app-section/AppSection'
 import InfoSection from "./components/info-section/InfoSection"

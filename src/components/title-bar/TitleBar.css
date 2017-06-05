@@ -16,14 +16,14 @@
 }
 .Title-Bar-Logo-Container{
     float: left;
-    width: 30%;
+    width: 35%;
 }
 .Title-Bar-Logo{
     margin-left: 40px;
 }
 .Title-Bar-Title-Container{
     float: left;
-    width: 40%;
+    width: 30%;
 }
 .Title-Bar-Title{
     text-align: center;
@@ -31,7 +31,7 @@
 }
 .Title-Bar-Buttons-Container{
     float: left;
-    width: 30%;
+    width: 35%;
 }
 .Title-Bar-Buttons-Img{
     float: right;
