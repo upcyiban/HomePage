@@ -1,0 +1,34 @@
+@media (max-width: 1240px){
+    .Footer{
+        width: 1200px;
+    }
+
+}
+@media (min-width: 1240px){
+    .Footer{
+        width: 80%;
+    }
+}
+.Footer{
+    height: 100px;
+    margin: 10px auto;
+}
+.Footer>.Footer-Left{
+    height: 100px;
+    width: 30%;
+    float: left;
+}
+.Footer>.Footer-Center{
+    text-align: center;
+    width: 40%;
+    float: left;
+    color: white;
+}
+.Footer>.Footer-Right{
+    width: 30%;
+    float: left;
+    height: 44px;
+    background: url(../../assets/logo/yiban-logo.png);
+    background-repeat: no-repeat;
+    background-position-x: right;
+}
