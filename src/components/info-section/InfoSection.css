@@ -88,8 +88,10 @@
 	line-height: 10px;
 	text-align: center;
 }
-.notice-container>p{
+.notice-container>a{
 	line-height: 10px;
+	text-decoration: none;
+	color: black
 }
 .customize-slick-slider{
 	height: 180px;

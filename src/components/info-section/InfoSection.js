@@ -1,34 +1,34 @@
 import React,{ Component } from 'react'
 import Slider from 'react-slick'
-import img1 from '../../assets/logo/logo.png'
 import './InfoSection.css'
+import c1 from '../../assets/carousel/c1.jpg'
+import c2 from '../../assets/carousel/c2.jpg'
 
 const InfoConf = {
 
 	headerConf: [
 		{
 			name: '账号广场',
-			href: '#'
+			href: 'http://www.yiban.cn/square/index'
 		},
 		{
-			name: '账号广场',
-			href: '#'
+			name: '公众平台',
+			href: 'http://mp.yiban.cn/notice/index'
 		},
 		{
-			name: '账号平台',
-			href: '#'
+			name: '轻应用快搭',
+			href: 'http://q.yiban.cn/'
 		},
 		{
-			name: '账号平台',
-			href: '#'
+			name: '应用广场',
+			href: 'http://app.yiban.cn/'
 		},
 		{
-			name: '账号平台',
-			href: '#'
-		},
-		{
-			name: '账号平台',
-			href: '#'
+			name: '优课YOOC',
+			href: 'http://www.yiban.cn/mobile/index.html'
+		},{
+			name: '手机易班',
+			href: 'http://www.yiban.cn/mobile/index.html'
 		}
 	],
 	listConf: [
@@ -46,7 +46,7 @@ const InfoConf = {
 		},
 		{
 			name: '加为好友',
-			href: '#'
+			href: 'http://www.yiban.cn/simple/needlogin'
 		}
 	]
 
@@ -56,37 +56,40 @@ const InfoConf = {
 const notice1 = {
 	title:'通知公告',
 	content:[
-		'动漫配音大赛开始啦',
-		'动漫配音大赛开始啦',
-		'动漫配音大赛开始啦',
-		'动漫配音大赛开始啦'
+		{
+			text:'【福利】小易小班教你怎样获得网薪！',
+			href:'http://www.yiban.cn/forum/article/show/channel_id/70922/puid/5370538/group_id/0/article_id/22613969'			
+		},
+		{
+			text:'【投稿通知】社团投稿已开启，你确定不投稿？',
+			href:'http://www.yiban.cn/forum/article/show/channel_id/70922/puid/5370538/group_id/0/article_id/22465551'			
+		},
 	]
 }
 const notice2 = {
 	title:'校园活动',
 	content:[
-		'动漫配音大赛开始啦',
-		'动漫配音大赛开始啦',
-		'动漫配音大赛开始啦',
-		'动漫配音大赛开始啦'
+		{
+			text:'梦想绿茵场',
+			href:'http://www.yiban.cn/forum/article/show/channel_id/70922/puid/5370538/group_id/0/article_id/23979353'			
+		},
+		{
+			text:'【爱‘拼’才会赢】拼图大赛来袭',
+			href:'http://www.yiban.cn/forum/article/show/channel_id/70922/puid/5370538/group_id/0/article_id/23914445'			
+		},
 	]
 }
 const carousel = [
 	{
-		name:'你好',
-		href:'baidu.com',
-		src: img1
+		name:'1',
+		href:'#',
+		src: c1
 	},
 	{
-		name:'你好',
-		href:'baidu.com',
-		src: img1
-	},
-	{
-		name:'你好',
-		href:'baidu.com',
-		src: img1
-	},
+		name:'2',
+		href:'#',
+		src: c2
+	}
 ]
 class Notice extends Component{
 	render(){
@@ -94,7 +97,7 @@ class Notice extends Component{
 			<div className="notice-container">
 				<h2>{this.props.content.title}</h2>
 				{this.props.content.content.map((c,i)=>
-					<p key={i}>{`${i+1}.  ${c}`}</p>
+					<a href={c.href} key={i}>{`${i+1}.  ${c.text}`} <br/> </a>
 				)}
 			</div>
 		)
@@ -130,8 +133,8 @@ class TeacherInfo extends Component{
 	render(){
 		return (
 			<div className="teacher-info">
-				<a href="baidu.com" className="teacher-box">教师推荐</a>
-				<a href="baidu.com" className="teacher-box">
+				<a href="#" className="teacher-box">教师推荐</a>
+				<a href="http://www.yiban.cn/puser/list/school_id/34039/type/onlyPub" className="teacher-box">
 					<div className="college-logo" ></div>
 					学院入口
 					</a>

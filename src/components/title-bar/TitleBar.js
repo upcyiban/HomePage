@@ -39,9 +39,9 @@ class Buttons extends Component{
     render(){
         return (
             <div className="Title-Bar-Buttons-Container">
-                <Button href="https://baidu.com" bg="Title-Bar-Button-Bg-Pink" val="注册"/>
-                <Button href="https://baidu.com" bg="Title-Bar-Button-Bg-Blue" val="登陆"/>
-                <Button href="https://baidu.com" bg="Title-Bar-Button-Bg-Green" val="数字石大"/>
+                <Button href="http://www.yiban.cn/user/reg/index?type=baseinfo" bg="Title-Bar-Button-Bg-Pink" val="注册"/>
+                <Button href="http://i.upc.edu.cn/dcp/yiban.jsp?" bg="Title-Bar-Button-Bg-Blue" val="登陆"/>
+                <Button href="https://i.upc.edu.cn" bg="Title-Bar-Button-Bg-Green" val="数字石大"/>
                 <img alt="search" className="Title-Bar-Buttons-Img" src={search}/>
                 
             </div>

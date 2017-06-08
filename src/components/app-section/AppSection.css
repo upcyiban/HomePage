@@ -33,22 +33,33 @@
 }
 .App-Section-App-Show-Panel{
     float: left;
-    width: 70%;
+    width: 80%;
 }
 .App-Section-App{
     float: left;
     margin: 5px 0 5% 15%;
+    width: 81px;
+    height: 96px;
     text-decoration: none;
+    overflow: visible;
     transition: all .3s;
     animation-duration: 0.5s;
     animation-name: flowup;
+}
+.App-Section-App:hover{
+    transform: scale(1.2,1.2)
 }
 .App-Section-App-Name{
     text-align: center;
     color: white;
 }
 .App-Section-App-Icon{
-    border-radius: 5px;
+    margin-left: 6px;
+    border-radius: 10px;
+    background: white;
+    padding: 5px;
+    width: 59px;
+    height: 59px;
 }
 .App-Section-App-Nav-Button-Container{
     display: block;
