@@ -99,6 +99,9 @@
 	height: 180px;
 	width: 100%
 }
+.slick-item>img{
+	width: 100%;
+}
 .teacher-info{
 	float: left;
 	width: 10%;

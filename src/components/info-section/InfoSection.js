@@ -1,5 +1,6 @@
 import React,{ Component } from 'react'
 import Slider from 'react-slick'
+import img1 from '../../assets/logo/logo.png'
 import './InfoSection.css'
 
 const InfoConf = {
@@ -70,6 +71,23 @@ const notice2 = {
 		'动漫配音大赛开始啦'
 	]
 }
+const carousel = [
+	{
+		name:'你好',
+		href:'baidu.com',
+		src: img1
+	},
+	{
+		name:'你好',
+		href:'baidu.com',
+		src: img1
+	},
+	{
+		name:'你好',
+		href:'baidu.com',
+		src: img1
+	},
+]
 class Notice extends Component{
 	render(){
 		return (
@@ -98,9 +116,10 @@ class YBCarousel extends Component{
 			
 			<div className="YbCarousel">
 				<Slider {...settings} >
-					<a className="slick-item" style={{background: 'red'}} href="#"></a>
-					<a className="slick-item" style={{background: 'green'}} href="#"></a>
-					<a className="slick-item" style={{background: 'purple'}} href="#"></a>
+					{this.props.conf.map((c,i)=>
+						<a className="slick-item" href={c.href} key={i}><img src={c.src} alt={c.name}/></a>
+						)
+					}
       			</Slider>
 			</div>
 
@@ -124,7 +143,7 @@ class News extends Component{
 	render(){
 		return (
 			<div className="news-all-container">
-				<YBCarousel />
+				<YBCarousel conf={carousel} />
 				<Notice content={notice1}/>
 				<Notice content={notice2}/>
 			</div>

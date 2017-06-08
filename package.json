@@ -5,7 +5,7 @@
   "dependencies": {
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
-    "react-responsive-carousel": "^3.1.19"
+    "react-slick": "^0.14.11"
   },
   "devDependencies": {
     "mockjs": "^1.0.1-beta3",
