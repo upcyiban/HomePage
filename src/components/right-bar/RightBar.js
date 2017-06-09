@@ -1,5 +1,7 @@
 import React,{ Component } from 'react'
 import iconBg from '../../assets/icon/right-icon.png'
+import iconBg1 from '../../assets/icon/right-icon1.png'
+import iconBg2 from '../../assets/icon/right-icon2.png'
 import './RightBar.css'
 
 const config = [
@@ -8,11 +10,11 @@ const config = [
         href:'#'
     },
     {
-        iconBg:iconBg,
+        iconBg:iconBg1,
         href:'#'
     },
     {
-        iconBg:iconBg,
+        iconBg:iconBg2,
         href:'#'
     }
 ]
@@ -20,7 +22,7 @@ const config = [
 class RightBarIcon extends Component{
     render(){
         return (
-            <a className="Right-Bar-Icon" style={{background: `url(${this.props.iconBg})`}} href={this.props.href}> </a>
+            <a className="Right-Bar-Icon" style={{background: `url(${this.props.iconBg})`,backgroundRepeat:'no-repeat'}} href={this.props.href}> </a>
         )
     }
 }
