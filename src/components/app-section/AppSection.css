@@ -1,7 +1,7 @@
 @media (max-width: 1240px){
     .AppSection{
         width: 1200px;
-        padding: 10px 20px 10px 20px;      
+        padding: 0 20px 10px 20px;      
         margin: 0;  
     }
 
@@ -9,7 +9,7 @@
 @media (min-width: 1240px){
     .AppSection{
         width: 80%;
-        padding: 2% 5% 2% 5%;
+        padding: 0 5% 2% 5%;
         margin-left: auto;
         margin-right: auto;
     }
@@ -34,10 +34,11 @@
 .App-Section-App-Show-Panel{
     float: left;
     width: 80%;
+    padding-top: 100px;
 }
 .App-Section-App{
     float: left;
-    margin: 5px 0 5% 15%;
+    margin: 5px 0 5% 8%;
     width: 81px;
     height: 96px;
     text-decoration: none;
@@ -64,6 +65,7 @@
 .App-Section-App-Nav-Button-Container{
     display: block;
     height: 80px;
+    transform: translateX(25px)
 }
 .App-Section-App-Nav-Button{
     width: 180px;

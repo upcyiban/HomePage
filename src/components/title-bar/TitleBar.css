@@ -14,12 +14,16 @@
     background: rgba(255, 255, 255, .6);
     padding: 20px 0 20px 0;
 }
+.Title-Bar-Inner-Container{
+    width: 80%;
+    margin: 0 auto;
+}
 .Title-Bar-Logo-Container{
     float: left;
     width: 35%;
 }
 .Title-Bar-Logo{
-    margin-left: 40px;
+    margin-left: 0;
 }
 .Title-Bar-Title-Container{
     float: left;
@@ -46,9 +50,7 @@
     color: white;
     margin:8px 15px
 }
-.Title-Bar-Buttons-Button:nth-child(1){
-    margin-right: 50px;
-}
+
 .Title-Bar-Buttons-Button:hover{
     box-shadow: 0 0 8px 4px white;
 }

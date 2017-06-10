@@ -97,7 +97,7 @@ class Notice extends Component{
 			<div className="notice-container">
 				<h2>{this.props.content.title}</h2>
 				{this.props.content.content.map((c,i)=>
-					<a href={c.href} key={i}>{`${i+1}.  ${c.text}`} <br/> </a>
+					<a href={c.href} key={i}>{`${i+1}.  ${c.text}`}</a>
 				)}
 			</div>
 		)
@@ -108,6 +108,7 @@ class YBCarousel extends Component{
 	render(){
     var settings = {
 	  className:'customize-slick-slider',
+	  arrows: false,
       dots: true,
       infinite: true,
       slidesToShow: 1,
