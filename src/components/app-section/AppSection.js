@@ -95,7 +95,7 @@ const data = [
         },
         {
         name: "四六级报名",
-        href: "#",
+        href: "http://ksbm.upc.edu.cn/CET/?un=1507010330&time=2017-06-11%2020:36:57&verify=77d787ec23d7f56234d4202aa12ce10c",
         icon: icon12
         },
         {
@@ -105,7 +105,7 @@ const data = [
         },
         {
         name: "我的图书馆",
-        href: "#",
+        href: "http://211.87.177.4/reader/redr_info.php",
         icon: icon14
         },
         {
@@ -288,7 +288,7 @@ class AppNavButton extends Component{
 class App extends Component{
     render(){
         return (
-            <a ref="app" className="App-Section-App" href={this.props.detail.href}>
+            <a ref="app" target="_blank" className="App-Section-App" href={this.props.detail.href}>
                 <img alt={this.props.detail.name} className="App-Section-App-Icon" src={this.props.detail.icon} />
                 <div className="App-Section-App-Name">{this.props.detail.name}</div>
             </a>

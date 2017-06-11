@@ -7,22 +7,22 @@ import './RightBar.css'
 const config = [
     {
         iconBg:iconBg,
-        href:'#'
+        href:'http://www.yiban.cn/forum/ad/articleShow/id/29857'
     },
     {
         iconBg:iconBg1,
-        href:'#'
+        href:'http://www.yiban.cn/forum/ad/articleShow/id/29857'
     },
     {
         iconBg:iconBg2,
-        href:'#'
+        href:'http://www.yiban.cn/help.html'
     }
 ]
 
 class RightBarIcon extends Component{
     render(){
         return (
-            <a className="Right-Bar-Icon" style={{background: `url(${this.props.iconBg})`,backgroundRepeat:'no-repeat'}} href={this.props.href}> </a>
+            <a className="Right-Bar-Icon" style={{background: `url(${this.props.iconBg})`,backgroundRepeat:'no-repeat'}} href={this.props.href} target="_blank"> </a>
         )
     }
 }
