@@ -12,7 +12,7 @@ const InfoConf = {
 			href: 'http://www.yiban.cn/square/index'
 		},
 		{
-			name: '公众平台',
+			name: '公共平台',
 			href: 'http://mp.yiban.cn/notice/index'
 		},
 		{
@@ -25,7 +25,7 @@ const InfoConf = {
 		},
 		{
 			name: '优课YOOC',
-			href: 'http://www.yiban.cn/mobile/index.html'
+			href: 'http://www.yooc.me/'
 		},{
 			name: '手机易班',
 			href: 'http://www.yiban.cn/mobile/index.html'

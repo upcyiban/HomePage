@@ -98,7 +98,7 @@ const data = [
         },
         {
         name: "四六级报名",
-        href: "http://ksbm.upc.edu.cn/CET/?un=1507010330&time=2017-06-11%2020:36:57&verify=77d787ec23d7f56234d4202aa12ce10c",
+        href: "http://ksbm.upc.edu.cn/CET/",
         icon: icon12
         },
         {
@@ -165,7 +165,7 @@ const data = [
         },
         {
             name: "易问卷",
-            href: "https://www.yiban.cn/questionnaire/index/index",
+            href: "https://www.yiban.cn/questionnaire/index/edit",
             icon: icon27
         },
         {
@@ -175,7 +175,7 @@ const data = [
         },
         {
             name: "通讯录",
-            href: "http://yb.upc.edu.cn/project/ShowTime/",
+            href: "http://yb.upc.edu.cn/project/tongxunlu/",
             icon: icon29
         },
         {
@@ -185,7 +185,7 @@ const data = [
         },
         {
             name: "生活查询",
-            href: "http://yb.upc.edu.cn/project/tongxunlu/",
+            href: "http://yb.upc.edu.cn/project/ShowTime/",
             icon: icon211
         }
     ],
