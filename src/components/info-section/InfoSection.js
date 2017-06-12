@@ -105,7 +105,7 @@ class Intro extends Component{
 				<div className={`Intro-Bg ${this.props.show?'Intro-Bg-Active':''}`} onClick={this.changeState}></div>
 				<div className={`Intro-Content ${this.props.show?'Intro-Content-Active':''}`}>
 					<p>
-						中国石油大学是教育部直属全国重点大学，是国家“211工程”重点建设和开展“优势学科创新平台”建设并建有研究生院的高校之一。中国石油大学（华东）是教育部和五大能源企业集团公司、教育部和山东省人民政府共建的高校，是石油、石化高层次人才培养的重要基地，被誉为“石油科技人才的摇篮”，现已成为一所以工为主、石油石化特色鲜明...
+						&nbsp;&nbsp;&nbsp;&nbsp;中国石油大学是教育部直属全国重点大学，是国家“211工程”重点建设和开展“优势学科创新平台”建设并建有研究生院的高校之一。中国石油大学（华东）是教育部和五大能源企业集团公司、教育部和山东省人民政府共建的高校，是石油、石化高层次人才培养的重要基地，被誉为“石油科技人才的摇篮”，现已成为一所以工为主、石油石化特色鲜明...
 					</p>
 				</div>
 			</div>
@@ -126,7 +126,6 @@ class Notice extends Component{
 	}
 }
 class YBCarousel extends Component{
-	
 	render(){
     var settings = {
 	  className:'customize-slick-slider',

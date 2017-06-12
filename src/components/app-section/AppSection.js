@@ -25,6 +25,9 @@ import icon25 from '../../assets/icon/易生活/易动态.jpg'
 import icon26 from '../../assets/icon/易生活/易投票.jpg'
 import icon27 from '../../assets/icon/易生活/易问卷.jpg'
 import icon28 from '../../assets/icon/易生活/迎新系统.jpg'
+import icon29 from '../../assets/icon/易生活/通讯录.png'
+import icon210 from '../../assets/icon/易生活/舌尖上的石大.png'
+import icon211 from '../../assets/icon/易生活/生活查询.png'
 import icon30 from '../../assets/icon/易工具/辅导员评价.jpg'
 import icon31 from '../../assets/icon/易工具/教务系统.png'
 import icon32 from '../../assets/icon/易工具/就业信息.jpg'
@@ -169,12 +172,27 @@ const data = [
             name: "迎新系统",
             href: "http://yb.upc.edu.cn/welcome/",
             icon: icon28
+        },
+        {
+            name: "通讯录",
+            href: "http://yb.upc.edu.cn/project/ShowTime/",
+            icon: icon29
+        },
+        {
+            name: "舌尖上的石大",
+            href: "http://yb.upc.edu.cn/project/deliciousfood/",
+            icon: icon210
+        },
+        {
+            name: "生活查询",
+            href: "http://yb.upc.edu.cn/project/tongxunlu/",
+            icon: icon211
         }
     ],
     [
         {
         name: "辅导员评价",
-        href: "http://yb.upc.edu.cn/instructor/#/yiban",
+        href: "http://f.yiban.cn/iapp116335",
         icon: icon30
         },
         {
