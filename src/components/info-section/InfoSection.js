@@ -3,6 +3,10 @@ import Slider from 'react-slick'
 import './InfoSection.css'
 import c1 from '../../assets/carousel/c1.jpg'
 import c2 from '../../assets/carousel/c2.jpg'
+import c3 from '../../assets/carousel/3.jpg'
+import c4 from '../../assets/carousel/4.jpg'
+import c5 from '../../assets/carousel/5.jpg'
+import c6 from '../../assets/carousel/6.jpg'
 
 const InfoConf = {
 
@@ -64,6 +68,22 @@ const notice1 = {
 			text:'【投稿通知】社团投稿已开启，你确定不投稿？',
 			href:'http://www.yiban.cn/forum/article/show/channel_id/70922/puid/5370538/group_id/0/article_id/22465551'			
 		},
+		{
+			text:'【网薪商城】易班熊在等你带回家啦~',
+			href:'http://www.yiban.cn/forum/article/show/channel_id/70922/puid/5370538/group_id/0/article_id/24048077'			
+		},
+		{
+			text:'【福利】@班长大大，你还我们六一礼物！',
+			href:'http://www.yiban.cn/forum/article/show/article_id/23803083/channel_id/70922/puid/5370538/group_id/0'			
+		},
+		{
+			text:'【重磅】网薪商城上新了！',
+			href:'http://www.yiban.cn/forum/article/show/channel_id/70922/puid/5370538/group_id/0/article_id/23222113'			
+		},
+		{
+			text:'【通知】关于对非法获取网薪渠道的查处办法',
+			href:'http://www.yiban.cn/forum/article/show/channel_id/70922/puid/5370538/group_id/0/article_id/23305879'			
+		},
 	]
 }
 const notice2 = {
@@ -77,18 +97,54 @@ const notice2 = {
 			text:'【爱‘拼’才会赢】拼图大赛来袭',
 			href:'http://www.yiban.cn/forum/article/show/channel_id/70922/puid/5370538/group_id/0/article_id/23914445'			
 		},
+		{
+			text:'“留住石光，不负韶华”写下你的祝福和石大一起见证',
+			href:'http://www.yiban.cn/forum/schoolAd/articleShow/id/578371'			
+		},
+		{
+			text:'元芳，你怎么看？',
+			href:'http://www.yiban.cn/forum/article/show/channel_id/70922/puid/5370538/group_id/0/article_id/24067425'			
+		},
+		{
+			text:'知名校友田跃民与学子共谈艺术人生',
+			href:'http://www.yiban.cn/forum/article/show/channel_id/70922/puid/5370538/group_id/0/article_id/23904259'			
+		},
+		{
+			text:'【思创104】思想碰撞，授业解惑',
+			href:'http://www.yiban.cn/forum/article/show/channel_id/70922/puid/5370538/group_id/0/article_id/23760589'			
+		},
 	]
 }
 const carousel = [
 	{
 		name:'1',
-		href:'#',
+		href:'http://www.yiban.cn/forum/article/show/channel_id/70922/puid/5370538/group_id/0/article_id/22465551',
 		src: c1
 	},
 	{
 		name:'2',
-		href:'#',
+		href:'http://www.yiban.cn/forum/article/show/channel_id/70922/puid/5370538/group_id/0/article_id/22613969',
 		src: c2
+	},
+	{
+		name:'3',
+		href:'http://www.yiban.cn/forum/schoolAd/articleShow/id/578371',
+		src: c3
+	},
+	{
+		name:'4',
+		href:'http://www.yiban.cn/forum/article/show/channel_id/70922/puid/5370538/group_id/0/article_id/23222113',
+		src: c4
+	},
+	{
+		name:'5',
+		href:'http://www.yiban.cn/forum/article/show/channel_id/70922/puid/5370538/group_id/0/article_id/23914445',
+		src: c5
+	},
+	{
+		name:'6',
+		href:'http://www.yiban.cn/forum/article/show/channel_id/70922/puid/5370538/group_id/0/article_id/23904259',
+		src: c6
 	}
 ]
 class Intro extends Component{
