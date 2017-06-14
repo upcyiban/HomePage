@@ -96,11 +96,11 @@ const data = [
         href: "http://learn.upc.edu.cn/meol/homepage/common/",
         icon: icon11
         },
-        {
-        name: "四六级报名",
-        href: "http://ksbm.upc.edu.cn/CET/",
-        icon: icon12
-        },
+        // {
+        // name: "四六级报名",
+        // href: "http://ksbm.upc.edu.cn/CET/",
+        // icon: icon12
+        // },
         {
         name: "题库",
         href: "http://www.yiban.cn/t/index/",
