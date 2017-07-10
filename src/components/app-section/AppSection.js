@@ -17,7 +17,7 @@ import icon15 from '../../assets/icon/易学习/易查询.jpg'
 import icon16 from '../../assets/icon/易学习/易打印.jpg'
 import icon17 from '../../assets/icon/易学习/资料库.jpg'
 import icon20 from '../../assets/icon/易生活/网薪商城.jpg'
-import icon21 from '../../assets/icon/易生活/我们爱叨叨.jpg'
+//import icon21 from '../../assets/icon/易生活/我们爱叨叨.jpg'
 import icon22 from '../../assets/icon/易生活/相册.jpg'
 import icon23 from '../../assets/icon/易生活/一卡通自助服务平台.png'
 import icon24 from '../../assets/icon/易生活/易博客.jpg'
@@ -88,19 +88,19 @@ const data = [
     [
         {
         name: "石大讲座网",
-        href: "http://lecture.upc.edu.cn/index.php?s=/Home/Index/index.html",
+        href: "http://i.upc.edu.cn/dcp/forward.action?path=dcp/core/appstore/menu/jsp/redirect&appid=43013&ac=3",
         icon: icon10
         },
         {
         name: "石大云课堂",
-        href: "http://learn.upc.edu.cn/meol/homepage/common/",
+        href: "http://i.upc.edu.cn/dcp/forward.action?path=dcp/core/appstore/menu/jsp/redirect&appid=40516&ac=3",
         icon: icon11
         },
-        // {
-        // name: "四六级报名",
-        // href: "http://ksbm.upc.edu.cn/CET/",
-        // icon: icon12
-        // },
+        {
+        name: "四六级报名",
+        href: "http://i.upc.edu.cn/dcp/forward.action?path=dcp/core/appstore/menu/jsp/redirect&appid=10116&ac=7",
+        icon: icon12
+        },
         {
         name: "题库",
         href: "http://www.yiban.cn/t/index/",
@@ -108,7 +108,7 @@ const data = [
         },
         {
         name: "我的图书馆",
-        href: "http://211.87.177.4/reader/redr_info.php",
+        href: "http://i.upc.edu.cn/dcp/forward.action?path=dcp/core/appstore/menu/jsp/redirect&appid=1186&ac=3",
         icon: icon14
         },
         {
@@ -133,11 +133,11 @@ const data = [
             href: "http://eshop.yiban.cn/?access_token=7c8e4cd012a8287becfee48a8094db70&v_time=14931980191726%23/home#/home",
             icon: icon20
         },
-        {
-            name: "我们爱叨叨",
-            href: "http://vd.upc.edu.cn/Category_121/Index.aspx",
-            icon: icon21
-        },
+        // {
+        //     name: "我们爱叨叨",
+        //     href: "http://vd.upc.edu.cn/Category_121/Index.aspx",
+        //     icon: icon21
+        // },
         {
             name: "相册",
             href: "http://www.yiban.cn/album/web/index",
@@ -145,7 +145,7 @@ const data = [
         },
         {
             name: "一卡通自助服务平台",
-            href: "http://card.upc.edu.cn/",
+            href: "http://card.upc.edu.cn/Login.aspx",
             icon: icon23
         },
         {
@@ -197,7 +197,7 @@ const data = [
         },
         {
         name: "教务系统",
-        href: "http://jwxt.upc.edu.cn/jwxt",
+        href: "http://i.upc.edu.cn/dcp/forward.action?path=dcp/core/appstore/menu/jsp/redirect&appid=1180&ac=3",
         icon: icon31
         },
         {
@@ -207,7 +207,7 @@ const data = [
         },
         {
         name: "石大云盘",
-        href: "http://pan.upc.edu.cn/",
+        href: "http://i.upc.edu.cn/dcp/forward.action?path=dcp/core/appstore/menu/jsp/redirect&appid=41568&ac=1",
         icon: icon33
         },
         {
