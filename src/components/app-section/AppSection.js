@@ -40,6 +40,7 @@ import icon40 from '../../assets/icon/易帮助/快搭使用帮助.jpg'
 import icon41 from '../../assets/icon/易帮助/易班开放平台.png'
 import icon42 from '../../assets/icon/易帮助/易班使用指南.jpg'
 import icon43 from '../../assets/icon/易帮助/易文档.jpg'
+import icon44 from '../../assets/icon/易社区/领航工程.jpg'
 import './AppSection.css'
 
 const data = [
@@ -83,6 +84,11 @@ const data = [
             name: "新闻快讯",
             href: "https://www.yiban.cn/Org/orglistShow/type/forum/puid/5370538#393",
             icon: icon07
+        },
+        {
+            name: "领航工程",
+            href: "https://www.yiban.cn/org/orglistShow/type/forum/puid/5370538#2761",
+            icon: icon44
         }
     ],
     [
