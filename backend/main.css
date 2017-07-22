@@ -73,6 +73,7 @@ html,body{
 .data-title{
     color: #000;
     padding: 10px;
+    border-bottom: 1px solid #E2E2E2;
 }
 .carousel-container{
     display: flex;
@@ -82,7 +83,7 @@ html,body{
 }
 .carousel-item-container{
     width: 359.5px;
-    border-top: 1px solid #E2E2E2;
+    border-bottom: 1px solid #E2E2E2;
     border-right: 1px solid #E2E2E2;
     display: flex;
     align-items: center;
@@ -129,4 +130,118 @@ html,body{
 }
 .confirm-btn:hover{
     box-shadow: 0 3px 10px #90BEF9;
+}
+.notice-container{
+    border-top: 1px solid #E2E2E2;
+    padding: 10px 0 10px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#notice1-first{
+    border-top: none;
+}
+#notices2-container>.data-title{
+    border-bottom: none;
+}
+.notice-container>label{
+    display: block;
+    width: 10%;
+    text-align: center;
+    font-size: 15px;
+}
+.notice-container>textarea{
+    width: 85%;
+    margin-bottom: 10px;
+    border: none;
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, .16) inset;
+    font-size: 15px;
+}
+.notice-container>input{
+    width: 85%;
+    border: none;
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, .16) inset;
+    font-size: 15px;
+}
+.app-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.app-item-container{
+    border-right: 1px solid #E2E2E2;
+    border-bottom: 1px solid #E2E2E2;
+    width: 179px;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    flex-wrap: wrap; 
+    flex-direction: row; 
+}
+.app-container>.app-item-container:nth-child(4n){
+    border-right: none;
+}
+.app-item-container>.app-icon{
+    width: 90%;
+    margin: 5px 0 5px;
+}
+.app-item-container>.app-name{
+    width: 80px;
+    margin: 10px 0 10px;
+    border: 1px solid #E2E2E2;
+    text-align: center;
+}
+.app-item-container>.app-icon-upload{
+    margin: 0 0 10px;
+    width: 80%;
+}
+.app-item-container>.app-href{
+    margin-bottom: 10px;
+    width: 80%;
+    border: 1px solid #E2E2E2;
+}
+.confirm-btn-small{
+    height: 25px;
+    width: 60px;
+    margin:0 5px 10px;
+    color: #fff;
+    background: #90BEF9; 
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    line-height: 25px;
+    font-size: 15px;
+}
+.delete-btn-small{
+    height: 25px;
+    width: 60px;
+    margin:0 5px 10px;
+    color: #fff;
+    background: #FF6868;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    line-height: 25px;
+    font-size: 15px;
+}
+.add-app-container{
+    height: 310.094px;
+    background: url("assets/add.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+#save-btn{
+    position: fixed;
+    bottom: 10%;
+    right: 10%;
+    user-select: none;
+    background: #00FEB0;
+    width: 7em;
+    text-align: center;
+    padding: 8px;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, .16);
 }
