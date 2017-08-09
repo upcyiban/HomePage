@@ -3,7 +3,7 @@ const BACKEND_LOGIN        = `${BACKEND_ROOT_URL}/homepage/login`
 const BACKEND_LOGIN_CHECK  = `${BACKEND_ROOT_URL}/homepage/login/check`
 const BACKEND_IMAGE_UPLOAD = `${BACKEND_ROOT_URL}/homepage/image`
 const BACKEND_DATA_SUBMIT  = `${BACKEND_ROOT_URL}/homepage/data`
-const DATA_PATH = 'data.json'
+const DATA_PATH = 'data_copy.json'
 const TABS_NAME = ['易社区','易学习','易生活','易工具','易帮助']
 const DEFAULT_ICON = 'assets/icon.svg'
 let carouselFirst = document.querySelector('#carousel-item-first')
@@ -13,6 +13,7 @@ let notice1Container = document.querySelector('#notices1-container')
 let notice2Container = document.querySelector('#notices2-container')
 let appsContainer = document.querySelector('#apps-container')
 let saveBtn = document.querySelector('#save-btn')
+let loginPage = document.querySelector('#login-page')
 let msgBar = {
             _msgBar : document.querySelector('#msg-bar'),
             infoBg  : '#90BEF9',
@@ -45,8 +46,10 @@ function judgeLogin(){
     }).then(res => 
         res.json()
     ).then(msg => {
-        if (msg.code != 1){
-            location.href = "login.html"
+        if (msg.code == 1){
+            loginPage.style.display = 'none'
+        }else{
+            loginPage.style.display = 'flex'
         }
     }).catch(err => 
         console.error(err)
@@ -257,9 +260,47 @@ function handleSave(){
         })
     })
 }
-function start(){
+function loginSubmit(){
+            let usname = document.querySelector('input[name=username]')
+                let pwd =  document.querySelector('input[name=password]')
+                let data = {
+                    username : usname.value,
+                    password      : pwd.value
+                }
+            // console.log(data)
+                msgBar.info('正在登录')
+                fetch(BACKEND_LOGIN,{
+                    method:'POST',
+                    credentials: 'include',
+                    body: JSON.stringify(data)
+                }).then(res => 
+                    res.json()
+                ).then(msg => {
+                    if (msg.code == 1){
+                        msgBar.success('登陆成功')
+                        judgeLogin()
+                    }else{
+                        msgBar.warn(msg.message)
+                        usname.value = ""
+                        pwd.value = ""
+                    }
+                }).catch(err => {
+                    console.error(err)
+                })
+        }
+
+function handleSubmit(){
+    let subBtn = document.querySelector('#submit-btn')
+    subBtn.addEventListener('click',loginSubmit)
+    document.onkeypress = (e)=>{
+        if (e.keyCode == 13){
+            loginSubmit()
+        }
+    }
+}
+(function (){
     judgeLogin()
     fetchData(DATA_PATH)
     handleSave()
-}
-start()
+    handleSubmit()
+})()

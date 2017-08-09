@@ -24,6 +24,8 @@
 }
 .Title-Bar-Logo{
     margin-left: 0;
+    height: 60px;
+    transform: translateY(-4px);
 }
 .Title-Bar-Title-Container{
     float: left;
@@ -32,6 +34,7 @@
 .Title-Bar-Title{
     text-align: center;
     margin: 0 auto;
+        line-height: 55px
 }
 .Title-Bar-Buttons-Container{
     float: left;
@@ -48,7 +51,7 @@
     box-shadow: 0 0 5px 4px white;
     border-radius: 21px;
     color: white;
-    margin:8px 15px
+    margin:12px 15px
 }
 
 .Title-Bar-Buttons-Button:hover{

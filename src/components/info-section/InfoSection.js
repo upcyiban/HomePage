@@ -211,7 +211,7 @@ class TeacherInfo extends Component{
 	render(){
 		return (
 			<div className="teacher-info">
-				<a href="#" className="teacher-box">教师推荐</a>
+				<a href="#" className="teacher-box">名师推荐</a>
 				<a href="http://www.yiban.cn/puser/list/school_id/34039/type/onlyPub" className="teacher-box" target="_blank">
 					<div className="college-logo" ></div>
 					学院入口
@@ -224,9 +224,9 @@ class News extends Component{
 	render(){
 		return (
 			<div className="news-all-container">
-				<YBCarousel conf={carousel} />
-				<Notice content={notice1}/>
-				<Notice content={notice2}/>
+				<YBCarousel conf={this.props.carousels} />
+				<Notice content={this.props.notice_1}/>
+				<Notice content={this.props.notice_2}/>
 			</div>
 		)
 	}
@@ -279,6 +279,9 @@ export default class InfoSection extends Component{
 		}
 		this.handleIntroShow = this.handleIntroShow.bind(this);
 	}
+	componentWillMount(){
+		console.log(this.props)
+	}
 	handleIntroShow(){
 		this.setState({introShow:!this.state.introShow})
 	}
@@ -287,7 +290,8 @@ export default class InfoSection extends Component{
 			<div className="InfoSection">
 				<ListHeader conf={InfoConf.headerConf}/>
 				<ListVertical conf={InfoConf.listConf} onIntroStateChange={this.handleIntroShow}/>
-				<News />
+				<News carousels={this.props.notices.carousels} notice_1={this.props.notices.notice_1} 
+															   notice_2={this.props.notices.notice_2}/>
 				<TeacherInfo />
 				<Intro show={this.state.introShow} onIntroStateChange={this.handleIntroShow}/>
 			</div>

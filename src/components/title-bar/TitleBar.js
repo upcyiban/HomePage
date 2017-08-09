@@ -1,6 +1,6 @@
 import React,{ Component } from 'react'
 import './TitleBar.css'
-import logo from '../../assets/logo/logo.png'
+import logo from '../../assets/logo/logo.svg'
 import search from '../../assets/logo/search.png'
 
 
@@ -29,7 +29,7 @@ class Title extends Component{
     render(){
         return (
             <div className="Title-Bar-Title-Container">
-                <h1 className="Title-Bar-Title">易班发展中心</h1>
+                <h1 className="Title-Bar-Title">石大易班</h1>
             </div>
         )
     }

@@ -356,19 +356,25 @@ class AppShowPanel extends Component{
 
 export default class AppSection extends Component{
     constructor(props){
-        super();
+        super(props);
         this.state = {
             activeIndex:0,
-            activeTab:data[0]
+            activeTab:props.apps[0],
+            apps:props.apps
         }
+        console.log(props.apps)
         this.handleButtonClick = this.handleButtonClick.bind(this)
         this.toRefresh         = this.toRefresh.bind(this)
+        console.log(this)
+    }
+    componentWillReceiveProps(nextProps){
+        this.setState({activeTab:nextProps.apps[this.state.activeIndex]})
     }
     handleButtonClick(index){
         this.setState({activeIndex:index,activeTab:[]})
     }
     toRefresh(){
-        this.setState({activeTab:data[this.state.activeIndex]})
+        this.setState({activeTab:this.props.apps[this.state.activeIndex]})
     }
     render(){
         return (
