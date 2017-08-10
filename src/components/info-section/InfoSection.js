@@ -34,119 +34,9 @@ const InfoConf = {
 			name: '手机易班',
 			href: 'http://www.yiban.cn/mobile/index.html'
 		}
-	],
-	listConf: [
-		{
-			name: '查看简介',
-			href: '#'
-		},
-		{
-			name: '机构群(23)',
-			href: '#'
-		},
-		{
-			name: '本校成员:15582',
-			href: '#'
-		},
-		{
-			name: '加为好友',
-			href: 'http://www.yiban.cn/simple/needlogin'
-		}
 	]
+}
 
-	
-	
-}
-const notice1 = {
-	title:'通知公告',
-	content:[
-		{
-			text:'【福利】小易小班教你怎样获得网薪！',
-			href:'http://www.yiban.cn/forum/article/show/channel_id/70922/puid/5370538/group_id/0/article_id/22613969'			
-		},
-		{
-			text:'【投稿通知】社团投稿已开启，你确定不投稿？',
-			href:'http://www.yiban.cn/forum/article/show/channel_id/70922/puid/5370538/group_id/0/article_id/22465551'			
-		},
-		{
-			text:'【网薪商城】易班熊在等你带回家啦~',
-			href:'http://www.yiban.cn/forum/article/show/channel_id/70922/puid/5370538/group_id/0/article_id/24048077'			
-		},
-		{
-			text:'【福利】@班长大大，你还我们六一礼物！',
-			href:'http://www.yiban.cn/forum/article/show/article_id/23803083/channel_id/70922/puid/5370538/group_id/0'			
-		},
-		{
-			text:'【重磅】网薪商城上新了！',
-			href:'http://www.yiban.cn/forum/article/show/channel_id/70922/puid/5370538/group_id/0/article_id/23222113'			
-		},
-		{
-			text:'【通知】关于对非法获取网薪渠道的查处办法',
-			href:'http://www.yiban.cn/forum/article/show/channel_id/70922/puid/5370538/group_id/0/article_id/23305879'			
-		},
-	]
-}
-const notice2 = {
-	title:'校园活动',
-	content:[
-		{
-			text:'黄海学院来校参观学习易班建设工作',
-			href:'http://www.yiban.cn/forum/article/show/channel_id/70922/puid/5370538/group_id/0/article_id/24323645'			
-		},
-		{
-			text:'学生指导与服务工作调查问卷抽奖结果出炉！',
-			href:'http://www.yiban.cn/forum/article/show/channel_id/70922/puid/5370538/group_id/0/article_id/24338043'			
-		},
-		{
-			text:'【中国石油大学（华东）】共聚石大，商“易”发展 ——易班山东省共建座谈会在石大召开',
-			href:'http://www.yiban.cn/forum/article/show/channel_id/70922/puid/5370538/group_id/0/article_id/24189215'			
-		},
-		{
-			text:'我校开展节能宣传周系列活动',
-			href:'http://www.yiban.cn/forum/article/show/channel_id/70922/puid/5370538/group_id/0/article_id/24338037'			
-		},
-		{
-			text:'【父爱化院】易班评论征集活动——爸，我陪你变老',
-			href:'http://www.yiban.cn/forum/article/show/channel_id/70922/puid/5370538/group_id/0/article_id/24156777'			
-		},
-		{
-			text:'喜大普奔|“爱拼才会赢”拼图比赛圆满结束',
-			href:'http://www.yiban.cn/forum/article/show/channel_id/70922/puid/5370538/group_id/0/article_id/24246221'			
-		},
-	]
-}
-const carousel = [
-	{
-		name:'1',
-		href:'http://www.yiban.cn/forum/article/show/channel_id/70922/puid/5370538/group_id/0/article_id/22465551',
-		src: c1
-	},
-	{
-		name:'2',
-		href:'http://www.yiban.cn/forum/article/show/channel_id/70922/puid/5370538/group_id/0/article_id/22613969',
-		src: c2
-	},
-	{
-		name:'3',
-		href:'http://www.yiban.cn/forum/schoolAd/articleShow/id/578371',
-		src: c3
-	},
-	{
-		name:'4',
-		href:'http://www.yiban.cn/forum/article/show/channel_id/70922/puid/5370538/group_id/0/article_id/24338043',
-		src: c4
-	},
-	{
-		name:'5',
-		href:'http://www.yiban.cn/forum/article/show/channel_id/70922/puid/5370538/group_id/0/article_id/24189215',
-		src: c5
-	},
-	{
-		name:'6',
-		href:'http://www.yiban.cn/forum/article/show/channel_id/70922/puid/5370538/group_id/0/article_id/24323645',
-		src: c6
-	}
-]
 class Intro extends Component{
 	constructor(props){
 		super(props);
@@ -175,7 +65,7 @@ class Notice extends Component{
 			<div className="notice-container">
 				<h2>{this.props.content.title}</h2>
 				{this.props.content.content.map((c,i)=>
-					<a href={c.href} key={i} target="_blank">{`${i+1}.  ${c.text}`}</a>
+					<a href={c.href} key={i} target="_blank">{c.text}</a>
 				)}
 			</div>
 		)
@@ -208,14 +98,62 @@ class YBCarousel extends Component{
 	}
 }
 class TeacherInfo extends Component{
+	constructor(props){
+		super(props)
+		this.showTeachers = this.showTeachers.bind(this)
+	}
+	showTeachers(){
+		this.props.showTeachers()
+	}
 	render(){
 		return (
 			<div className="teacher-info">
-				<a href="#" className="teacher-box">名师推荐</a>
+				<a href="#" className="teacher-box" onClick={this.showTeachers}>名师推荐</a>
 				<a href="http://www.yiban.cn/puser/list/school_id/34039/type/onlyPub" className="teacher-box" target="_blank">
 					<div className="college-logo" ></div>
 					学院入口
-					</a>
+				</a>
+			</div>
+		)
+	}
+}
+class Teachers extends Component{
+	constructor(props){
+		super(props)
+		this.state = {
+			showIndex : 0
+		}
+		this.nextGroup = this.nextGroup.bind(this)
+		this.closeTeachersGroupBox = this.closeTeachersGroupBox.bind(this)
+	}
+	closeTeachersGroupBox(){
+		this.props.close()
+	}
+	nextGroup(){
+		let next = this.state.showIndex==this.props.allTeachers.length-1?0:this.state.showIndex+1
+		this.setState({showIndex : next})
+	}
+	render(){
+		return (
+			<div className={`group-box ${this.props.show?'group-box-show':''} teachers-group`}>
+				<div className="group-close" onClick={this.closeTeachersGroupBox}></div>
+				<h3 className="group-title">
+					名师推荐
+				</h3>
+				<div className="group-items">
+					 {
+						this.props.allTeachers[this.state.showIndex].data.map((item,i)=>
+							<div className="group-item-container" key={i}>
+								<a href={item.url}><img src={item.avatar} alt={item.nickName} key={i}/></a>
+								{item.nickName}
+							</div>
+						)
+					} 
+					<div className="group-item-container" onClick={this.nextGroup}>
+						<a href='#'><img style={{padding:'10px',height:'44px',width:'44px'}} src='http://www.yiban.cn/public/images/refresh.png' alt='换一组'/></a>
+						换一组
+					</div>
+				</div>
 			</div>
 		)
 	}
@@ -254,7 +192,10 @@ class ListVertical extends Component{
 	}
 	handleClick(index){
 		if(index == 0){
-			this.props.onIntroStateChange();
+			this.props.onIntroStateChange()
+		}
+		if(index == 1){
+			this.props.showGroup()
 		}
 	}
 	render() {
@@ -262,8 +203,8 @@ class ListVertical extends Component{
 			<div className="list-vertical">
 				{
 					this.props.conf.map((c,i)=>
-						<li className="list-vertical-li" key={i}>
-							<a href={c.href} key={i} onClick={()=>this.handleClick(i)} >{c.name}</a>
+						<li className="list-vertical-li" key={i} onClick={()=>this.handleClick(i)}>
+							<a href={c.href} key={i}>{c.name}</a>
 						</li>
 					)
 				}
@@ -271,29 +212,67 @@ class ListVertical extends Component{
 		);
 	}
 }
+class GroupBox extends Component{
+	constructor(props){
+		super(props)
+		this.closeGroupBox = this.closeGroupBox.bind(this)
+	}
+	closeGroupBox(){
+		this.props.close()
+	}
+	render() {
+		return (
+			<div className={`group-box ${this.props.show?'group-box-show':''}`}>
+				<div className="group-close" onClick={this.closeGroupBox}></div>
+				<h3 className="group-title">
+					全部机构群
+				</h3>
+				<div className="group-items">
+					{
+						this.props.group.map((item,i)=>
+							<div className="group-item-container" key={i}>
+								<a href={item.url}><img src={item.avater} alt={item.name} key={i}/></a>
+								{item.name}
+							</div>
+						)
+					}
+				</div>
+			</div>
+		)
+	}
+}
 export default class InfoSection extends Component{
 	constructor(props){
 		super();
 		this.state = {
-			introShow: false
+			introShow: false,
+			groupShow: false,
+			teachersShow : false
 		}
-		this.handleIntroShow = this.handleIntroShow.bind(this);
-	}
-	componentWillMount(){
-		console.log(this.props)
+		this.handleShowGroup = this.handleShowGroup.bind(this)
+		this.handleIntroShow = this.handleIntroShow.bind(this)
+		this.handleShowTeachers = this.handleShowTeachers.bind(this)
 	}
 	handleIntroShow(){
 		this.setState({introShow:!this.state.introShow})
+	}
+	handleShowGroup(){
+		this.setState({groupShow : !this.state.groupShow})
+	}
+	handleShowTeachers(){
+		this.setState({teachersShow : !this.state.teachersShow})
 	}
     render(){
         return (
 			<div className="InfoSection">
 				<ListHeader conf={InfoConf.headerConf}/>
-				<ListVertical conf={InfoConf.listConf} onIntroStateChange={this.handleIntroShow}/>
+				<ListVertical conf={this.props.listConf} onIntroStateChange={this.handleIntroShow} showGroup={this.handleShowGroup}/>
 				<News carousels={this.props.notices.carousels} notice_1={this.props.notices.notice_1} 
 															   notice_2={this.props.notices.notice_2}/>
-				<TeacherInfo />
+				<TeacherInfo showTeachers={this.handleShowTeachers}/>
 				<Intro show={this.state.introShow} onIntroStateChange={this.handleIntroShow}/>
+				<GroupBox group={this.props.group} show={this.state.groupShow} close={this.handleShowGroup}></GroupBox>
+				<Teachers allTeachers={this.props.teachers} show={this.state.teachersShow} close={this.handleShowTeachers}></Teachers>
 			</div>
         )
     }

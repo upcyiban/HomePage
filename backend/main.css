@@ -257,3 +257,11 @@ html,body{
     justify-content:center;
     background: white;
 }
+::-webkit-scrollbar{
+    width: 4px;
+    background: white;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 2px;
+    background: rgba(0, 0, 0, .4)
+}

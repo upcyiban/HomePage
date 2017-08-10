@@ -6,50 +6,26 @@ import TitleBar from "./components/title-bar/TitleBar"
 import Footer from './components/footer/Footer'
 import './App.css';
 import { DATA_PATH } from './config/Conf'
+import EmptyTemplate from './config/Templ'
 
 class App extends Component {
   constructor(props){
     super(props)
-    this.state = {
-      data : {
-        notices:{
-          carousels:[
-            {name : '',href : '',src : ''}
-          ],
-          notice_1:{
-            title:'通知公告',
-            content:[
-              {text:'',href:''}
-            ]
-          },
-          notice_2:{
-            title:'校园活动',
-            content:[
-              {text:'',href:''}
-            ]
-          }
-        },
-        apps:[
-          [
-            {icon:'', name:'', href: ''}
-          ]
-        ]
-      }
-    }
+    this.state = EmptyTemplate
   }
   componentWillMount(){
-    console.log(DATA_PATH)
     fetch(DATA_PATH).then(res => res.json())
                     .then(data => {
+                      this.state.listConf[1].name = `机构群(${data.school_intro.group.data.length})`
+                      this.state.listConf[2].name = `本校成员:${data.school_intro.members}`
                       this.setState({data:data})
-                      console.log(this.state)
                     })
   }
   render() {
     return (
       <div className="App">
           <TitleBar />
-          <InfoSection notices={this.state.data.notices}/>
+          <InfoSection notices={this.state.data.notices} listConf={this.state.listConf} group={this.state.data.school_intro.group.data} teachers={this.state.data.teachers}/>
           <AppSection apps={this.state.data.apps}/>
           <Footer />
           <RightBar />

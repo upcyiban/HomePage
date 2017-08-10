@@ -362,10 +362,8 @@ export default class AppSection extends Component{
             activeTab:props.apps[0],
             apps:props.apps
         }
-        console.log(props.apps)
         this.handleButtonClick = this.handleButtonClick.bind(this)
         this.toRefresh         = this.toRefresh.bind(this)
-        console.log(this)
     }
     componentWillReceiveProps(nextProps){
         this.setState({activeTab:nextProps.apps[this.state.activeIndex]})
