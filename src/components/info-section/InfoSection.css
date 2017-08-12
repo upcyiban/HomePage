@@ -62,7 +62,7 @@
 	line-height: 40px;
 }
 .list-vertical-li:nth-child(3){
-	font-size: 50%;
+	font-size: 13px;
 }
 .news-all-container{
 	float: left;
@@ -207,7 +207,7 @@
 	cursor: pointer;
 }
 .group-items{
-	width: 410px;
+	width: 412px;
 	height: 550px;
 	display: flex;
 	flex-direction: row;
@@ -253,6 +253,7 @@
 .teachers-group>.group-items{
 	height: auto;
 	width: 214px;
+	overflow-y: visible;
 }
 .teachers-group .group-item-container{
 	width: 70px;
