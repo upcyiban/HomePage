@@ -1,0 +1,9 @@
+易抽奖 http://yb.upc.edu.cn:8080/
+易签到 http://yb.upc.edu.cn:8082/
+物资借用 http://yb.upc.edu.cn/project/borrowmaterial/
+易抽签 http://yb.upc.edu.cn/project/ballot/#/
+就业信息 http://career.upc.edu.cn/
+轻应用快搭 http://q.yiban.cn/
+教务系统 http://jwxt.upc.edu.cn/jwxt
+石大云盘 http://pan.upc.edu.cn/
+辅导员评价 http://yb.upc.edu.cn/instructor/#/yiban

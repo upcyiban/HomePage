@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>石大易班后台管理页</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="default-box">
+        <div class="data-title">滚动图</div>
+        <div class="carousel-container" id="carousel-container">
+            <div class="carousel-item-container" id="carousel-item-first">
+                <img class="carousel-img" src="/images/carousel/4.jpg">
+                <div class="carousel-href-container">
+                    链接:<input type="text" name="href" class="carousel-href">
+                </div>
+                <input type="file" name="image">
+                <input type="hidden" name="src">
+                <div class="confirm-btn">确定</div>
+            </div>
+        </div>
+    </div>
+    <div class="default-box" id="notices1-container">
+        <div class="data-title">通知公告</div>
+        <div class="notice1-container notice-container" id="notice1-first">
+            <label>内容:</label> <textarea name="text" cols="30" rows="5"></textarea>
+            <label>链接:</label> <input type="text" name="href">
+        </div>
+    </div>
+    <div class="default-box" id="notices2-container">
+        <div class="data-title">校园活动</div>
+    </div>
+    <div class="default-box" id="apps-container"></div>
+    <div id="save-btn">保存并上传</div>
+    <div class="login-container" id="login-page">
+        <div class="form">
+            <h1>登陆</h1>
+            <input type="text" name="username" placeholder="用户名 ：">
+            <input type="password" name="password" placeholder="密码 ：">
+            <div class="sub-btn" id="submit-btn">登陆</div>
+        </div>
+    </div>
+    <div class="msg-bar-hidden" id="msg-bar">请稍后</div>
+    <script src="main.js"></script>
+</body>
+</html>
