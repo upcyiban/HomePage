@@ -3,6 +3,7 @@ const BACKEND_LOGIN        = `${BACKEND_ROOT_URL}/homepage/login`
 const BACKEND_LOGIN_CHECK  = `${BACKEND_ROOT_URL}/homepage/login/check`
 const BACKEND_IMAGE_UPLOAD = `${BACKEND_ROOT_URL}/homepage/image`
 const BACKEND_DATA_SUBMIT  = `${BACKEND_ROOT_URL}/homepage/data`
+const BACKEND_DATA_FETCH   = `${BACKEND_ROOT_URL}/homepage/updateybdata`
 const DATA_PATH = 'data_copy.json'
 const TABS_NAME = ['易社区','易学习','易生活','易工具','易帮助']
 const DEFAULT_ICON = 'assets/icon.svg'
@@ -14,6 +15,7 @@ let notice2Container = document.querySelector('#notices2-container')
 let appsContainer = document.querySelector('#apps-container')
 let saveBtn = document.querySelector('#save-btn')
 let loginPage = document.querySelector('#login-page')
+let fetchBtn = document.querySelector('#fetch-btn')
 let msgBar = {
             _msgBar : document.querySelector('#msg-bar'),
             infoBg  : '#90BEF9',
@@ -21,7 +23,6 @@ let msgBar = {
             succBg  : '#00FEB0',
             show(msg,bg){
                 this._msgBar.innerHTML = msg
-                console.log(this._msgBar.style.backgroud )
                 this._msgBar.style.background = bg
                 if(!this._msgBar.classList.contains('msg-bar-active')){
                     this._msgBar.classList.add('msg-bar-active')
@@ -29,6 +30,27 @@ let msgBar = {
                 setTimeout(()=>{
                     this._msgBar.classList.remove('msg-bar-active')
                 },3000)
+            },
+            display(type,msg){
+                this._msgBar.innerHTML = msg
+                switch(type){
+                    case "info":{
+                        this._msgBar.style.background = this.infoBg
+                    }case "warn":{
+                        this._msgBar.style.background = this.warnBg
+                    }case "success":{
+                        this._msgBar.style.background = this.succBg
+                    }default:{
+                        console.error('Type string must be one of "info" "warn" or "success"')
+                        this._msgBar.style.background = this.infoBg
+                    }
+                }
+                if(!this._msgBar.classList.contains('msg-bar-active')){
+                    this._msgBar.classList.add('msg-bar-active')
+                }
+            },
+             close(){
+                this._msgBar.classList.remove('msg-bar-active')
             },
             info(msg){
                 this.show(msg,this.infoBg)
@@ -260,6 +282,24 @@ function handleSave(){
         })
     })
 }
+function handleFetchUpdate(){
+    fetchBtn.addEventListener('click',()=>{
+        msgBar.display('info','服务器正在获取 请稍后...')
+        fetch(BACKEND_DATA_FETCH,{
+            method: 'GET',
+            credentials: 'include'
+        }).then(res=>{
+            msgBar.close()
+            return res.json()
+        }).then(msg => {
+                if (msg.code == 7){
+                    msgBar.success(msg.message)
+                }else{
+                    msgBar.warn(msg.message)
+                }
+            })
+    })
+}
 function loginSubmit(){
             let usname = document.querySelector('input[name=username]')
                 let pwd =  document.querySelector('input[name=password]')
@@ -302,5 +342,6 @@ function handleSubmit(){
     judgeLogin()
     fetchData(DATA_PATH)
     handleSave()
+    handleFetchUpdate()
     handleSubmit()
 })()

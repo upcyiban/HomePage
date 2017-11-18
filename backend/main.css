@@ -246,6 +246,19 @@ html,body{
     cursor: pointer;
     box-shadow: 0 3px 8px rgba(0, 0, 0, .16);
 }
+#fetch-btn{
+    position: fixed;
+    bottom: 20%;
+    right: 10%;
+    user-select: none;
+    background: rgb(17, 226, 253);
+    width: 7em;
+    text-align: center;
+    padding: 8px;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, .16);
+}
 .login-container{
     height: 100%;
     width: 100%;
