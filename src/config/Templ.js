@@ -11,7 +11,7 @@ let EmptyTemplate = {
             ]
           },
           notice_2:{
-            title:'校园活动',
+            title:'易班烩',
             content:[
               {text:'',href:''}
             ]
